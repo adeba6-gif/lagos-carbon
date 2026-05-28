@@ -154,40 +154,21 @@
     }
 
     /* HERO */
-    #home .hero {
-      background: var(--dark);
+    #page-home .hero {
+      background:
+        linear-gradient(rgba(5, 18, 12, 0.8), rgba(5, 18, 12, 0.4)),
+        url('./Hero_Image_Compressed.png') center center / cover no-repeat;
       color: var(--white);
-      padding: 6rem 2rem 5rem;
+
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
     }
 
-    /* MAIN LAYOUT */
     .hero-inner {
-      max-width: 1200px;
+      max-width: 1100px;
       margin: 0 auto;
-      padding: 4rem 2rem 3rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 4rem;
-    }
-
-    /* LEFT SIDE */
-    .hero-content {
-      flex: 1;
-    }
-
-    /* RIGHT SIDE IMAGE */
-    .hero-image {
-      flex: 1;
-      display: flex;
-      justify-content: center;
-    }
-
-    .hero-image img {
-      width: 100%;
-      max-width: 500px;
-      border-radius: 6px;
-      object-fit: cover;
+      padding: 4rem 2rem 3rem
     }
 
     .hero-eyebrow {
@@ -221,7 +202,7 @@
     }
 
     .hero p {
-      color: var(--muted-light);
+      color: #f1f1f1;
       font-size: 1.1rem;
       max-width: 580px;
       margin-bottom: 2.5rem;
@@ -232,33 +213,6 @@
       display: flex;
       gap: 1rem;
       flex-wrap: wrap;
-    }
-
-    /* MOBILE */
-    @media (max-width: 900px) {
-      .hero-inner {
-        flex-direction: column;
-        text-align: center;
-        gap: 3rem;
-      }
-
-      .hero-content {
-        order: 1;
-      }
-
-      .hero-image {
-        order: 2;
-      }
-
-      .hero-btns {
-        justify-content: center;
-      }
-
-      .hero p,
-      .hero h1 {
-        margin-left: auto;
-        margin-right: auto;
-      }
     }
 
     .btn-primary {
@@ -1566,39 +1520,15 @@
     <!-- HERO -->
     <div class="hero">
       <div class="hero-inner">
-    
-        <!-- LEFT CONTENT -->
-        <div class="hero-content">
-          <div class="hero-eyebrow">
-            Africa's First Government-Organised Environmental Market
-          </div>
-    
-          <h1>
-            Building Trusted Environmental Markets for Lagos, rewarding climate action with
-            <em>sustainable revenue</em>
-          </h1>
-    
-          <p>
-            Lagos Carbon is a structured platform that enables the generation, verification,
-            and monetisation of high-integrity environmental credits from real-world infrastructure.
-          </p>
-    
-          <div class="hero-btns">
-            <a href="#" class="btn-primary" onclick="showPage('contact')">
-              Submit a Project
-            </a>
-    
-            <a href="#" class="btn-secondary" onclick="showPage('contact')">
-              Speak to the Team
-            </a>
-          </div>
+        <div class="hero-eyebrow">Africa's First Government-Organised Environmental Market</div>
+        <h1>Building Trusted Environmental Markets for Lagos, rewarding climate action with <em>sustainable revenue</em>
+        </h1>
+        <p>Lagos Carbon is a structured platform that enables the generation, verification, and monetisation of
+          high-integrity environmental credits from real-world infrastructure.</p>
+        <div class="hero-btns">
+          <a href="#" class="btn-primary" onclick="showPage('contact')">Submit a Project</a>
+          <a href="#" class="btn-secondary" onclick="showPage('contact')">Speak to the Team</a>
         </div>
-    
-        <!-- RIGHT IMAGE -->
-        <div class="hero-image">
-          <img src="./Hero_Image_Compressed.png" alt="Hero Image">
-        </div>
-    
       </div>
     </div>
 
