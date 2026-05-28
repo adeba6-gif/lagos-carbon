@@ -160,10 +160,34 @@
       padding: 6rem 2rem 5rem;
     }
 
+    /* MAIN LAYOUT */
     .hero-inner {
-      max-width: 1100px;
+      max-width: 1200px;
       margin: 0 auto;
-      padding: 4rem 2rem 3rem
+      padding: 4rem 2rem 3rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 4rem;
+    }
+
+    /* LEFT SIDE */
+    .hero-content {
+      flex: 1;
+    }
+
+    /* RIGHT SIDE IMAGE */
+    .hero-image {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+    }
+
+    .hero-image img {
+      width: 100%;
+      max-width: 500px;
+      border-radius: 6px;
+      object-fit: cover;
     }
 
     .hero-eyebrow {
@@ -208,6 +232,33 @@
       display: flex;
       gap: 1rem;
       flex-wrap: wrap;
+    }
+
+    /* MOBILE */
+    @media (max-width: 900px) {
+      .hero-inner {
+        flex-direction: column;
+        text-align: center;
+        gap: 3rem;
+      }
+
+      .hero-content {
+        order: 1;
+      }
+
+      .hero-image {
+        order: 2;
+      }
+
+      .hero-btns {
+        justify-content: center;
+      }
+
+      .hero p,
+      .hero h1 {
+        margin-left: auto;
+        margin-right: auto;
+      }
     }
 
     .btn-primary {
@@ -1000,7 +1051,7 @@
 
     /* FOOTER */
     footer {
-      background: var(--dark);
+      background: var(--green-mid);
       color: white;
       padding: 3rem 2rem 2rem;
     }
@@ -1028,7 +1079,7 @@
 
     .footer-desc {
       font-size: 0.85rem;
-      color: rgba(255, 255, 255, 0.45);
+      color: var(--muted-light);
       line-height: 1.7;
       max-width: 300px;
     }
@@ -1491,8 +1542,8 @@
   <!-- NAVIGATION -->
   <nav>
     <div class="nav-inner">
-      <a href="#" class="nav-logo" onclick="showPage('home')">
-        <img src="./Lagos-Carbon-Logo.svg" alt="Lagos Carbon Logo" style="height:40px; width:auto; object-fit:contain;">
+      <a href="#" class="nav-logo" style="display: flex; flex-direction: row;" onclick="showPage('home')">
+        <img src="./Lagos-Carbon-Icon.svg" alt="Lagos Carbon Logo" style="height:53px; width:auto; object-fit:contain;">
       </a>
       <button class="nav-toggle" onclick="toggleNav()" aria-label="Menu">
         <span></span><span></span><span></span>
@@ -1515,15 +1566,39 @@
     <!-- HERO -->
     <div class="hero">
       <div class="hero-inner">
-        <div class="hero-eyebrow">Africa's First Government-Organised Environmental Market</div>
-        <h1>Building Trusted Environmental Markets for Lagos, rewarding climate action with <em>sustainable revenue</em>
-        </h1>
-        <p>Lagos Carbon is a structured platform that enables the generation, verification, and monetisation of
-          high-integrity environmental credits from real-world infrastructure.</p>
-        <div class="hero-btns">
-          <a href="#" class="btn-primary" onclick="showPage('contact')">Submit a Project</a>
-          <a href="#" class="btn-secondary" onclick="showPage('contact')">Speak to the Team</a>
+    
+        <!-- LEFT CONTENT -->
+        <div class="hero-content">
+          <div class="hero-eyebrow">
+            Africa's First Government-Organised Environmental Market
+          </div>
+    
+          <h1>
+            Building Trusted Environmental Markets for Lagos, rewarding climate action with
+            <em>sustainable revenue</em>
+          </h1>
+    
+          <p>
+            Lagos Carbon is a structured platform that enables the generation, verification,
+            and monetisation of high-integrity environmental credits from real-world infrastructure.
+          </p>
+    
+          <div class="hero-btns">
+            <a href="#" class="btn-primary" onclick="showPage('contact')">
+              Submit a Project
+            </a>
+    
+            <a href="#" class="btn-secondary" onclick="showPage('contact')">
+              Speak to the Team
+            </a>
+          </div>
         </div>
+    
+        <!-- RIGHT IMAGE -->
+        <div class="hero-image">
+          <img src="./Hero_Image_Compressed.png" alt="Hero Image">
+        </div>
+    
       </div>
     </div>
 
@@ -1694,7 +1769,9 @@
       <div class="footer-inner">
         <div class="footer-top">
           <div>
-            <span class="footer-logo">Lagos Carbon</span>
+            <span class="footer-logo">
+              <img src="./Lagos-Carbon-Logo.svg" alt="Lagos Carbon Logo" style="height:100px; width:auto; object-fit:contain;">
+            </span>
             <p class="footer-desc">Africa's first government-organised environmental market — transforming Lagos State's
               climate challenge into investable opportunity.</p>
           </div>
@@ -1829,7 +1906,9 @@
       <div class="footer-inner">
         <div class="footer-top">
           <div>
-            <span class="footer-logo">Lagos Carbon</span>
+            <span class="footer-logo">
+              <img src="./Lagos-Carbon-Logo.svg" alt="Lagos Carbon Logo" style="height:100px; width:auto; object-fit:contain;">
+            </span>
             <p class="footer-desc">Africa's first government-organised environmental market platform.</p>
           </div>
           <div class="footer-col">
@@ -1988,7 +2067,9 @@
       <div class="footer-inner">
         <div class="footer-top">
           <div>
-            <span class="footer-logo">Lagos Carbon</span>
+            <span class="footer-logo">
+              <img src="./Lagos-Carbon-Logo.svg" alt="Lagos Carbon Logo" style="height:100px; width:auto; object-fit:contain;">
+            </span>
             <p class="footer-desc">Africa's first government-organised environmental market platform.</p>
           </div>
           <div class="footer-col">
@@ -2322,7 +2403,9 @@
       <div class="footer-inner">
         <div class="footer-top">
           <div>
-            <span class="footer-logo">Lagos Carbon</span>
+            <span class="footer-logo">
+              <img src="./Lagos-Carbon-Logo.svg" alt="Lagos Carbon Logo" style="height:100px; width:auto; object-fit:contain;">
+            </span>
             <p class="footer-desc">Africa's first government-organised environmental market platform.</p>
           </div>
           <div class="footer-col">
@@ -2450,7 +2533,9 @@
       <div class="footer-inner">
         <div class="footer-top">
           <div>
-            <span class="footer-logo">Lagos Carbon</span>
+            <span class="footer-logo">
+              <img src="./Lagos-Carbon-Logo.svg" alt="Lagos Carbon Logo" style="height:100px; width:auto; object-fit:contain;">
+            </span>
             <p class="footer-desc">Africa's first government-organised environmental market platform.</p>
           </div>
           <div class="footer-col">
@@ -2704,7 +2789,9 @@
       <div class="footer-inner">
         <div class="footer-top">
           <div>
-            <span class="footer-logo">Lagos Carbon</span>
+            <span class="footer-logo">
+              <img src="./Lagos-Carbon-Logo.svg" alt="Lagos Carbon Logo" style="height:100px; width:auto; object-fit:contain;">
+            </span>
             <p class="footer-desc">Africa's first government-organised environmental market — home of the Lagos
               Standard.</p>
           </div>
