@@ -11,10 +11,10 @@
     rel="stylesheet">
   <style>
     :root {
-      --green: rgb(26, 109, 103);
+      --green: #1a6d67;
       --green-light: #56B281;
       --green-mid: #3D9375;
-      --dark: rgb(8, 74, 85);
+      --dark: #084a55;
       --text: #1A6D67;
       --muted: #727272;
       --border: #d4e4da;
@@ -58,7 +58,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      height: 64px;
+      height: 84px;
     }
 
     .nav-logo {
@@ -595,6 +595,16 @@
       background: white;
     }
 
+    #page-about .page-header{
+      background:
+        linear-gradient(rgba(8, 74, 85, .7), rgba(2, 23, 26, .3)),
+        url('./images/About_Hero_Image.jpeg') center center / cover no-repeat;
+
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
     .about-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -627,7 +637,6 @@
     }
 
     .ecosystem-flow {
-      background: var(--bg);
       border: 1px solid var(--border);
       border-radius: 12px;
       padding: 2rem;
@@ -638,37 +647,39 @@
     .ecosystem-flow h3 {
       font-size: 0.9rem;
       font-weight: 500;
-      color: var(--white);
+      color: var(--text);
       margin-bottom: 1.5rem;
       text-transform: uppercase;
       letter-spacing: 0.06em;
+    }
+
+    .icon-green-light{
+      filter: brightness(0) saturate(100%) invert(67%) sepia(22%) saturate(743%) hue-rotate(96deg) brightness(92%) contrast(88%);
+    }
+    .icon-green{
+      filter: invert(34%) sepia(24%) saturate(1188%) hue-rotate(126deg) brightness(90%) contrast(92%);
+    }
+    .icon-white{
+      filter: invert(34%) sepia(24%) saturate(1188%) hue-rotate(126deg) brightness(90%) contrast(92%);
     }
 
     .flow-nodes {
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 0;
+      gap: 2rem;
       flex-wrap: wrap;
     }
 
-    .flow-node {
-      background: white;
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 0.75rem 1.25rem;
-      font-size: 0.9rem;
-      font-weight: 500;
-    }
-
-    .flow-node.center {
-      background: var(--green);
-      color: white;
-      border-color: var(--green);
+    .flow-nodes img{
+      height: 70px; 
+      width: auto; 
+      object-fit: contain;
+      filter: invert(34%) sepia(24%) saturate(1188%) hue-rotate(126deg) brightness(90%) contrast(92%);
     }
 
     .flow-arrow {
-      color: var(--white);
+      color: var(--green-light);
       font-size: 1.1rem;
       padding: 0 0.5rem;
     }
@@ -700,9 +711,31 @@
       color: var(--muted-light);
     }
 
+    .who-card img{
+      height: 40px;
+      width: auto;
+      object-fit: contain;
+      filter: brightness(0) saturate(100%) invert(67%) sepia(22%) saturate(743%) hue-rotate(96deg) brightness(92%) contrast(88%);
+      margin-bottom: .25rem;
+    }
+
     /* DEVELOPERS PAGE */
     #developers {
       background: white;
+    }
+
+    #page-developers .page-header{
+      background:
+        linear-gradient(
+          to bottom left,
+          rgba(8, 74, 85, .2) 0%, 
+          rgba(2, 23, 26, .9) 100%
+          ),
+        url('./images/For_ Developers_Hero_Image.jpeg') center center / cover no-repeat;
+
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
     }
 
     .benefits-grid {
@@ -710,6 +743,13 @@
       grid-template-columns: repeat(2, 1fr);
       gap: 1.25rem;
       margin-top: 2.5rem;
+    }
+
+    .benefits-grid img{
+      height: 70px; 
+      width: auto; 
+      object-fit: contain;
+      filter: brightness(0) saturate(100%) invert(67%) sepia(22%) saturate(743%) hue-rotate(96deg) brightness(92%) contrast(88%);
     }
 
     .benefit-card {
@@ -751,14 +791,13 @@
       width: 32px;
       height: 32px;
       border-radius: 50%;
-      background: var(--green-light);
-      border: 2px solid var(--green);
+      border: 2px solid var(--text);
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 0.8rem;
       font-weight: 500;
-      color: var(--green);
+      color: var(--text);
       flex-shrink: 0;
       margin-top: 2px;
     }
@@ -833,6 +872,16 @@
       background: var(--white);
     }
 
+    #page-faqs .page-header {
+      background:
+        linear-gradient(rgba(8, 74, 85, .6), rgba(2, 23, 26, .8)),
+        url('./images/FAQ_Hero_Image.jpeg') center top / cover no-repeat;
+
+      background-size: cover;
+      background-position: top;
+      background-repeat: no-repeat;
+    }
+
     .faq-list {
       margin-top: 2.5rem;
       max-width: 760px;
@@ -887,6 +936,16 @@
     /* CONTACT / FORM */
     #contact-form {
       background: white;
+    }
+
+    #page-contact .page-header {
+      background:
+        linear-gradient(rgba(8, 74, 85, .6), rgba(2, 23, 26, .8)),
+        url('./images/Contact_Hero_Image.jpeg') center top / cover no-repeat;
+
+      background-size: cover;
+      background-position: top;
+      background-repeat: no-repeat;
     }
 
     .form-grid {
@@ -1106,8 +1165,16 @@
 
     /* LAGOS STANDARD PAGE */
     .ls-hero {
-      background: var(--dark);
+      background: linear-gradient(
+          to bottom left,
+          rgba(8, 74, 85, .2) 0%, 
+          rgba(2, 23, 26, .9) 100%
+          ),
+        url('./images/Lagos_Standard_Hero_image.jpeg') center center / cover no-repeat;
       padding: 4rem 2rem 3.5rem;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
     }
 
     .ls-hero-inner {
@@ -1120,18 +1187,14 @@
     }
 
     .ls-badge {
-      background: rgba(29, 107, 71, 0.15);
-      border: 1.5px solid rgba(127, 255, 196, 0.3);
+      background: var(--white);
+      border: 1.5px solid var(--muted-light);
       border-radius: 16px;
       padding: 2rem;
       text-align: center;
     }
 
     .ls-badge-ring {
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      border: 3px solid #7fffc4;
       margin: 0 auto 1rem;
       display: flex;
       flex-direction: column;
@@ -1203,6 +1266,13 @@
       grid-template-columns: repeat(2, 1fr);
       gap: 1.25rem;
       margin-top: 2.5rem;
+    }
+
+    .condition-card img{
+      height: 70px; 
+      width: auto; 
+      object-fit: contain;
+      filter: invert(34%) sepia(24%) saturate(1188%) hue-rotate(126deg) brightness(90%) contrast(92%);
     }
 
     .condition-card {
@@ -1338,16 +1408,23 @@
       padding: 1.5rem;
     }
 
+    .buyer-card img {
+      width: 100%;
+      height: 150px;
+      border-radius: 5px;
+      object-fit: cover;
+    }
+
     .buyer-card h3 {
       font-size: 0.9rem;
       font-weight: 500;
-      color: #7fffc4;
+      color: var(--white);
       margin-bottom: 0.5rem;
     }
 
     .buyer-card p {
       font-size: 0.83rem;
-      color: rgba(255, 255, 255, 0.5);
+      color: var(--white);
       line-height: 1.6;
     }
 
@@ -1504,7 +1581,7 @@
   <nav>
     <div class="nav-inner">
       <a href="#" class="nav-logo" style="display: flex; flex-direction: row;" onclick="showPage('home')">
-        <img src="./Lagos-Carbon-Icon.svg" alt="Lagos Carbon Logo" style="height:53px; width:auto; object-fit:contain;">
+        <img src="./Lagos-Carbon-Logo.svg" alt="Lagos Carbon Logo" style="height:73px; width:auto; object-fit:contain;">
       </a>
       <button class="nav-toggle" onclick="toggleNav()" aria-label="Menu">
         <span></span><span></span><span></span>
@@ -1547,7 +1624,6 @@
         <div class="trust-partners">
           <img src="./lasepa-logo.png" alt="LASEPA" style="height:40px; width:auto; object-fit:contain;">
           <img src="./Ibile-logo.png" alt="Ibile Holdings" style="height:40px; width:auto; object-fit:contain;">
-          <span class="trust-tag">Lagos State Institutions</span>
         </div>
       </div>
     </div>
@@ -1785,11 +1861,17 @@
         <div class="ecosystem-flow">
           <h3>How We Fit in the Ecosystem</h3>
           <div class="flow-nodes">
-            <div class="flow-node">Project Developers</div>
+            <div class="flow-node">
+              <img src="./icons/workforce.png" alt="Project Developers Icon">
+            </div>
             <div class="flow-arrow">→</div>
-            <div class="flow-node center">Lagos Carbon</div>
+            <div class="flow-node center">
+              <img src="./Lagos-Carbon-Logo.svg" alt="Lagos Carbon Logo" style="margin-left: 4px; filter:none;">
+            </div>
             <div class="flow-arrow">→</div>
-            <div class="flow-node">Global Buyers</div>
+            <div class="flow-node">
+              <img src="./icons/trade.png" alt="Global Buyers Icon">
+            </div>
           </div>
         </div>
 
@@ -1798,31 +1880,37 @@
           <h2 class="section-title">Built for the whole ecosystem</h2>
           <div class="who-grid">
             <div class="who-card">
+              <img src="./icons/workforce.png" alt="Project Developers Icon">
               <h3>Project Developers</h3>
               <p>Solar, wind, waste, and efficiency project developers seeking additional revenue streams and improved
                 bankability.</p>
             </div>
             <div class="who-card">
+              <img src="./icons/government-building.png" alt="Government Bodies Icon">
               <h3>Government Bodies</h3>
               <p>Lagos State institutions including LASEPA and Ibile Holdings, providing regulatory backing and
                 enforcement mandate.</p>
             </div>
             <div class="who-card">
+              <img src="./icons/trade.png" alt="Global Buyers Icon">
               <h3>Global Buyers</h3>
               <p>International corporates, institutional investors, and compliance buyers seeking high-integrity African
                 environmental credits.</p>
             </div>
             <div class="who-card">
+              <img src="./icons/bank.png" alt="Financial Institutions Icon">
               <h3>Financial Institutions</h3>
               <p>Banks and lenders using environmental credit frameworks to improve project finance structuring and ESG
                 positioning.</p>
             </div>
             <div class="who-card">
+              <img src="./icons/cpu.png" alt="Technology Partners Icon">
               <h3>Technology Partners</h3>
               <p>MRV technology providers and data assurance platforms supporting sensor-driven monitoring and
                 verification.</p>
             </div>
             <div class="who-card">
+              <img src="./icons/standard.png" alt="Standard Bodies Icon">
               <h3>Standard Bodies</h3>
               <p>Gold Standard, Verra, and I-REC alignment ensuring international credibility and buyer acceptance.</p>
             </div>
@@ -1888,21 +1976,25 @@
         <h2 class="section-title">Why register your project?</h2>
         <div class="benefits-grid">
           <div class="benefit-card">
+            <img src="./icons/coins-stack.png" alt="Generate additional revenue Icon">
             <h3>Generate additional revenue</h3>
             <p>Environmental credits provide a new, recurring revenue stream on top of your existing project economics.
             </p>
           </div>
           <div class="benefit-card">
+            <img src="./icons/transference.png" alt="Improve project bankability Icon">
             <h3>Improve project bankability</h3>
             <p>Credit revenue improves project IRR and makes financing conversations more straightforward with lenders.
             </p>
           </div>
           <div class="benefit-card">
+            <img src="./icons/pilot.png" alt="Access to global capital Icon">
             <h3>Access to global capital</h3>
             <p>Connect with international corporates and institutional investors seeking African environmental credits.
             </p>
           </div>
           <div class="benefit-card">
+            <img src="./icons/planning.png" alt="Structured onboarding Icon">
             <h3>Structured onboarding</h3>
             <p>PDD design support and methodology guidance from project submission through to first credit issuance.</p>
           </div>
@@ -2521,24 +2613,24 @@
         </div>
         <div class="ls-badge">
           <div class="ls-badge-ring">
-            <span>Lagos Standard Certified</span>
+            <img src="./images/Lagos_Carbon_Certification.svg" alt="Lagos Carbon Certification" style="height: 130px; width: auto; object-fit: contain;">
           </div>
-          <p style="font-size:0.85rem; color:rgba(255,255,255,0.6); margin-top:1rem; line-height:1.6;">Issued under the
+          <p style="font-size:0.85rem; color: var(--muted); margin-top:1rem; line-height:1.6;">Issued under the
             authority of LASEPA and the Environmental Law of Lagos State</p>
           <div
-            style="margin-top:1.25rem; padding-top:1.25rem; border-top:1px solid rgba(255,255,255,0.1); display:flex; flex-direction:column; gap:0.5rem;">
+            style="margin-top:1.25rem; padding-top:1.25rem; border-top:1px solid var(--border); display:flex; flex-direction:column; gap:0.5rem;">
             <div style="display:flex; align-items:center; gap:0.5rem;"><span
-                style="color:#7fffc4; font-size:0.8rem;">✓</span><span
-                style="font-size:0.8rem; color:rgba(255,255,255,0.55);">Sensor-verified MRV data</span></div>
+                style="color: var(--muted); font-size:0.8rem;">✓</span><span
+                style="font-size:0.8rem; color: var(--muted);">Sensor-verified MRV data</span></div>
             <div style="display:flex; align-items:center; gap:0.5rem;"><span
-                style="color:#7fffc4; font-size:0.8rem;">✓</span><span
-                style="font-size:0.8rem; color:rgba(255,255,255,0.55);">Real-time audit trail on Hub</span></div>
+                style="color: var(--muted); font-size:0.8rem;">✓</span><span
+                style="font-size:0.8rem; color: var(--muted);">Real-time audit trail on Hub</span></div>
             <div style="display:flex; align-items:center; gap:0.5rem;"><span
-                style="color:#7fffc4; font-size:0.8rem;">✓</span><span
-                style="font-size:0.8rem; color:rgba(255,255,255,0.55);">LASEPA regulatory attestation</span></div>
+                style="color: var(--muted); font-size:0.8rem;">✓</span><span
+                style="font-size:0.8rem; color: var(--muted);">LASEPA regulatory attestation</span></div>
             <div style="display:flex; align-items:center; gap:0.5rem;"><span
-                style="color:#7fffc4; font-size:0.8rem;">✓</span><span
-                style="font-size:0.8rem; color:rgba(255,255,255,0.55);">Independent stakeholder access</span></div>
+                style="color: var(--muted); font-size:0.8rem;">✓</span><span
+                style="font-size:0.8rem; color: var(--muted);">Independent stakeholder access</span></div>
           </div>
         </div>
       </div>
@@ -2573,28 +2665,28 @@
           all four conditions are satisfied simultaneously — there are no exceptions and no partial awards.</p>
         <div class="conditions-grid">
           <div class="condition-card">
-            <div class="condition-num">01</div>
+            <img src="./icons/global-network.png" alt="Internationally Recognised Methodology Icon">
             <h3>Internationally Recognised Methodology</h3>
             <p>The credit must be generated under a methodology recognised by Gold Standard, Verra (VCS), the Paris
               Agreement Article 6.4 Mechanism, or an equivalent internationally accepted standard — as digitised within
               the Lagos Carbon technology architecture.</p>
           </div>
           <div class="condition-card">
-            <div class="condition-num">02</div>
+            <img src="./icons/standard.png" alt="Certification Rigour Icon">
             <h3>Certification Rigour</h3>
             <p>The credit must be produced through Lagos Carbon's digital MRV pipeline: sensor data ingestion with
               real-time anomaly detection; AI-assisted certification workflow guidance; and a fully digital,
               independently verified audit trail from registration through issuance.</p>
           </div>
           <div class="condition-card">
-            <div class="condition-num">03</div>
+            <img src="./icons/procedure.png" alt="Full Process Transparency Icon">
             <h3>Full Process Transparency</h3>
             <p>Every stage of the credit's lifecycle — from project registration and baseline establishment through
               monitoring, verification, and issuance — is recorded immutably within the Lagos Carbon Hub, accessible in
               real time or via complete historical logs.</p>
           </div>
           <div class="condition-card">
-            <div class="condition-num">04</div>
+            <img src="./icons/access-card.png" alt="Independent Stakeholder Access Icon">
             <h3>Independent Stakeholder Access</h3>
             <p>The full credit lifecycle record is made directly accessible — without intermediation by Lagos Carbon or
               the project developer — to project finance investors, credit off-takers, LASEPA, and other key
@@ -2691,18 +2783,21 @@
           The Lagos Standard creates trust at every node of the environmental credit value chain.</p>
         <div class="buyer-cards">
           <div class="buyer-card">
+            <img src="./images/Project_Finance_Investors.jpeg" alt="Project Finance Investors Image">
             <h3>Project Finance Investors</h3>
             <p>Real-time access to verified credit generation data — directly from the Hub, independently of the project
               developer — transforms environmental credit revenue from a promised cashflow into a verifiable one. The
               Lagos Standard is the assurance framework that makes credit revenue bankable.</p>
           </div>
           <div class="buyer-card">
+            <img src="./images/Corporate_Credit_Off_Takers.jpeg" alt="Corporate Credit Off-takers Image">
             <h3>Corporate Credit Off-takers</h3>
             <p>RE100 members, CDP reporters, and Article 6 counterparties need credits they can defend to their own
               auditors and regulators. A Lagos Standard badge — backed by LASEPA's statutory authority and a complete,
               independently accessible audit trail — provides that defensibility.</p>
           </div>
           <div class="buyer-card">
+            <img src="./images/Project_Developers.jpeg" alt="Project Developers Image">
             <h3>Project Developers</h3>
             <p>The Lagos Standard premium directly improves your project economics. Credits bearing the badge command a
               higher price from premium buyers. The transparent certification process also strengthens your relationship
