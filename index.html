@@ -58,7 +58,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      height: 84px;
+      height: 87px;
     }
 
     .nav-logo {
@@ -168,7 +168,7 @@
     .hero-inner {
       max-width: 1100px;
       margin: 0 auto;
-      padding: 4rem 2rem 3rem
+      padding: 4rem 0rem 3rem
     }
 
     .hero-eyebrow {
@@ -676,6 +676,12 @@
       width: auto; 
       object-fit: contain;
       filter: invert(34%) sepia(24%) saturate(1188%) hue-rotate(126deg) brightness(90%) contrast(92%);
+    }
+    .flow-node div{
+      margin-top: 5px;
+      font-size: 0.9rem;
+      font-weight: 400;
+      color: var(--text);
     }
 
     .flow-arrow {
@@ -1187,11 +1193,12 @@
     }
 
     .ls-badge {
-      background: var(--white);
-      border: 1.5px solid var(--muted-light);
+      background: #ffffff40;
+      border: 1.5px solid  rgb(197 197 197);
       border-radius: 16px;
       padding: 2rem;
       text-align: center;
+      backdrop-filter: blur(1px);
     }
 
     .ls-badge-ring {
@@ -1272,7 +1279,7 @@
       height: 70px; 
       width: auto; 
       object-fit: contain;
-      filter: invert(34%) sepia(24%) saturate(1188%) hue-rotate(126deg) brightness(90%) contrast(92%);
+      filter: brightness(0) saturate(100%) invert(67%) sepia(22%) saturate(743%) hue-rotate(96deg) brightness(92%) contrast(88%);
     }
 
     .condition-card {
@@ -1581,7 +1588,7 @@
   <nav>
     <div class="nav-inner">
       <a href="#" class="nav-logo" style="display: flex; flex-direction: row;" onclick="showPage('home')">
-        <img src="./Lagos-Carbon-Logo.svg" alt="Lagos Carbon Logo" style="height:73px; width:auto; object-fit:contain;">
+        <img src="./Lagos-Carbon-Logo.svg" alt="Lagos Carbon Logo" style="height:78px; width:auto; object-fit:contain;">
       </a>
       <button class="nav-toggle" onclick="toggleNav()" aria-label="Menu">
         <span></span><span></span><span></span>
@@ -1863,14 +1870,17 @@
           <div class="flow-nodes">
             <div class="flow-node">
               <img src="./icons/workforce.png" alt="Project Developers Icon">
+              <div>Project Developers</div>
             </div>
             <div class="flow-arrow">→</div>
             <div class="flow-node center">
               <img src="./Lagos-Carbon-Logo.svg" alt="Lagos Carbon Logo" style="margin-left: 4px; filter:none;">
+              <div>Lagos Carbon</div>
             </div>
             <div class="flow-arrow">→</div>
             <div class="flow-node">
               <img src="./icons/trade.png" alt="Global Buyers Icon">
+              <div>Global Buyers</div>
             </div>
           </div>
         </div>
@@ -2615,22 +2625,22 @@
           <div class="ls-badge-ring">
             <img src="./images/Lagos_Carbon_Certification.svg" alt="Lagos Carbon Certification" style="height: 130px; width: auto; object-fit: contain;">
           </div>
-          <p style="font-size:0.85rem; color: var(--muted); margin-top:1rem; line-height:1.6;">Issued under the
+          <p style="font-size:0.85rem; color: var(--white); margin-top:1rem; line-height:1.6;">Issued under the
             authority of LASEPA and the Environmental Law of Lagos State</p>
           <div
             style="margin-top:1.25rem; padding-top:1.25rem; border-top:1px solid var(--border); display:flex; flex-direction:column; gap:0.5rem;">
             <div style="display:flex; align-items:center; gap:0.5rem;"><span
-                style="color: var(--muted); font-size:0.8rem;">✓</span><span
-                style="font-size:0.8rem; color: var(--muted);">Sensor-verified MRV data</span></div>
+                style="color: var(--white); font-size:0.8rem;">✓</span><span
+                style="font-size:0.8rem; color: var(--white);">Sensor-verified MRV data</span></div>
             <div style="display:flex; align-items:center; gap:0.5rem;"><span
-                style="color: var(--muted); font-size:0.8rem;">✓</span><span
-                style="font-size:0.8rem; color: var(--muted);">Real-time audit trail on Hub</span></div>
+                style="color: var(--white); font-size:0.8rem;">✓</span><span
+                style="font-size:0.8rem; color: var(--white);">Real-time audit trail on Hub</span></div>
             <div style="display:flex; align-items:center; gap:0.5rem;"><span
-                style="color: var(--muted); font-size:0.8rem;">✓</span><span
-                style="font-size:0.8rem; color: var(--muted);">LASEPA regulatory attestation</span></div>
+                style="color: var(--white); font-size:0.8rem;">✓</span><span
+                style="font-size:0.8rem; color: var(--white);">LASEPA regulatory attestation</span></div>
             <div style="display:flex; align-items:center; gap:0.5rem;"><span
-                style="color: var(--muted); font-size:0.8rem;">✓</span><span
-                style="font-size:0.8rem; color: var(--muted);">Independent stakeholder access</span></div>
+                style="color: var(--white); font-size:0.8rem;">✓</span><span
+                style="font-size:0.8rem; color: var(--white);">Independent stakeholder access</span></div>
           </div>
         </div>
       </div>
